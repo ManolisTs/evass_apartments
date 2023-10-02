@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Evas's Apartments</title>
+    <!-- Custom css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header" id="home">
+        <nav id="navbar">
+            <a href="#home" class="logo"><img src="img/logo.png" style="border-radius: 15%;" alt="Eva's Apartments Palioura"></a>
+            <div class="links" id="nav">
+                <a href="#home" data-translate="home_link">Home</a>
+                <a href="#about" data-translate="about_link">About</a>
+                <a href="#apartments" data-translate="apartments_link">Apartments</a>
+                <a href="#service" data-translate="services_link">Services</a>
+                <a href="#team" data-translate="team_link">Team</a>
+                <a href="#contact" data-translate="contact_link">Contact</a>
+                <!-- Language buttons -->
+                <div class="language-dropdown">
+                    <button class="language-button">Language</button>
+                    <div class="language-options">
+                      <a href="#" class="this_language" data-lang="en" data-translate="english_link">English</a>
+                      <a href="#" class="this_language" data-lang="gr" data-translate="greek_link">Greek</a>
+                    </div>
+                </div>
+            </div>
+            <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+            <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+        </nav>
+        <div class="content">
+            <h3 data-translate="renting_effortless">Renting made effortless</h3>
+            <h1 data-translate="renting_start">start your vacation<br data-translate="renting_ideal">with an ideal apartment</h1>
+            <a href="#apartments"><button class="btn" data-translate="home_apartments">Apartments</button></a>
+        </div>
+    </div>
+    <!-- Header Section End -->
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="image"></div>
+            <div class="about-content">
+                <h1 data-translate="about_special">What makes our apartments special?</h1>
+                <p>
+                    <span data-translate="about_apartments_intro">Our seaside apartments, just 600m from the beach. Enjoy stunning views of the sea and Mount Olympus. </span>
+                    <span data-translate="about_apartments_nearby">Nearby, find Beach Bars Kyma and Asterias, a supermarket, and a traditional Greek tavern. </span>
+                    <span data-translate="about_apartments_location">We're also conveniently located for day trips: Potamos sea (15 mins), Thessaloniki Airport (25 mins), Cosmos Shopping Center (27 mins), and Thessaloniki city center (35 mins).</span>
+                </p>                  
+                <a href="#contact">
+                    <button class="btn" data-translate="book_btn">
+                        Book Now!
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="container" style="padding-top: 8rem;">
+            <div class="about-content">
+                <h1 data-translate="about_makes_special">What makes our town special?</h1>
+                <p>
+                    <span data-translate="about_town_intro">Epanomi, a charming town nestled along the northern coast of Greece, offers a delightful blend of natural beauty and cultural richness. </span>
+                    <span data-translate="about_beaches">With its pristine beaches that stretch along the azure Aegean Sea, Epanomi is a haven for sun-seekers and water enthusiasts. </span>
+                    <span data-translate="about_vineyards">The town is also renowned for its vineyards, producing some of the finest wines in the region, making it a must-visit destination for wine connoisseurs. </span>
+                    <span data-translate="about_streets">Epanomi's picturesque streets are lined with quaint tavernas and cafes where you can savor authentic Greek cuisine while enjoying the warm hospitality of the locals. </span>
+                    <span data-translate="about_experience">Whether you're exploring its historical sites or simply basking in the Mediterranean sunshine, Epanomi promises an unforgettable experience for all who visit.</span>
+                </p>                  
+                <button id="openGuideBtn" class="btn" data-translate="town_details">
+                    View Details
+                </button>
+                <div id="pdfGuide" class="guide">
+                    <div class="guide-content">
+                        <div id="close-guide">
+                            <span class="close">&times;</span>
+                        </div>                        
+                        <object id="pdfObject" data="FOOD.pdf#view=Fit" type="application/pdf" width="100%" height="100%"></object>
+                    </div>
+                </div>
+            </div>
+            <div class="image-town"></div>
+        </div>
+    </section>
+    <!-- About Section End-->
+
+    <!-- Apartments Section -->
+    <section class="apartments" id="apartments">
+        <h1 class="heading" data-translate="our">Our <span>Apartments</span></h1>
+        <p class="heading-description" data-translate="view_apartments">View our apartments and their features</p>
+        <div class="container">
+            <div class="post">
+                <div class="apartments-img">
+                    <div class="slider">
+                        <img src="img/asteria.jpg" alt="">
+                        <img src="img/asteria2.jpg" alt="">
+                        <img src="img/asteria3.jpg" alt="">
+                        <img src="img/asteria4.jpg" alt="">
+                        <img src="img/asteria5.jpg" alt="">
+                        <img src="img/asteria6.jpg" alt="">
+                    </div>
+                    <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+                    <span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    <span>4 <i class="fa-solid fa-user"></i> </span>
+                </div>
+                <div class="apartments-content">
+                    <h1>Asteria</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at minus explicabo?</p>
+                </div>
+            </div>
+            <!-- Add more posts here -->
+            <div class="post">
+                <div class="apartments-img">
+                    <div class="slider">
+                        <img src="img/asteria.jpg" alt="">
+                        <img src="img/asteria2.jpg" alt="">
+                        <img src="img/asteria3.jpg" alt="">
+                        <img src="img/asteria4.jpg" alt="">
+                        <img src="img/asteria5.jpg" alt="">
+                        <img src="img/asteria6.jpg" alt="">
+                    </div>
+                    <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+                    <span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    <span>4 <i class="fa-solid fa-user"></i> </span>
+                </div>
+                <div class="apartments-content">
+                    <h1>Irene</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at minus explicabo?</p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="apartments-img">
+                    <div class="slider">
+                        <img src="img/asteria.jpg" alt="">
+                        <img src="img/asteria2.jpg" alt="">
+                        <img src="img/asteria3.jpg" alt="">
+                        <img src="img/asteria4.jpg" alt="">
+                        <img src="img/asteria5.jpg" alt="">
+                        <img src="img/asteria6.jpg" alt="">
+                    </div>
+                    <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+                    <span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    <span>4 <i class="fa-solid fa-user"></i> </span>
+                </div>
+                <div class="apartments-content">
+                    <h1>Helen</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at minus explicabo?</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Full-screen modal -->
+        <div class="modal" id="imageModal">
+            <span class="modal-close-btn" id="closeModal"><i class="fa-solid fa-close" style="font-size: 30px;"></i></span>
+            <div class="modal-content">
+                <span class="modal-left-arrow" id="prevImage"><i class="fa-solid fa-arrow-left"></i></span>
+                <span class="modal-right-arrow" id="nextImage"><i class="fa-solid fa-arrow-right"></i></span>
+                <img src="" alt="" id="modalImage">
+            </div>
+        </div>
+  
+    </section>
+    <!-- Apartments Section End-->
+
+    <!-- Service Section -->
+    <section class="service" id="service">
+        <h1 class="heading" data-translate="service_our">Our <span>Services</span></h1>
+        <p class="heading-description" data-translate="services_offer">We offer basic services for all apartments</p>
+        <div class="container">
+            <div class="services-content">
+                <div class="card">
+                    <div class="icon"><i class="fa fa-wifi"></i></div>
+                    <p class="title" data-translate="wifi">Wifi</p>
+                    <p class="text" data-translate="wifi_text">All the apartments have free internet access</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-bowl-food"></i></div>
+                    <p class="title" data-translate="breakfasts">Breakfast</p>
+                    <p class="text" data-translate="breakfast_text">We provide breakfast for the rental days</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa fa-parking"></i></div>
+                    <p class="title" data-translate="parking">Parking</p>
+                    <p class="text" data-translate="parking_text">There is free parking in the area of the apartments</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-mountain-sun"></i></div>
+                    <p class="title" data-translate="garden_view">Garden View</p>
+                    <p class="text" data-translate="garden_view_text">Each apartment has a balcony with a view of the garden and the sea</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+                    <p class="title" data-translate="public_beach">Public Beach Access</p>
+                    <p class="text" data-translate="public_beach_text">There is a public beach very close to the apartments</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service Section End -->
+
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <h1 class="heading" data-translate="team_our"> Our <span>Team</span></h1>
+        <p class="heading-description" data-translate="team_hospitality">Long tradition & true love in hospitality</p>
+        <div class="container">
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="img/pic-1.png" alt="">
+                </div>
+                <div class="team-content">
+                    <h3 data-translate="ann_name">Georgoula Ann</h3>
+                    <p data-translate="host">Host</p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/profile.php?id=100015775124119"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/angeor1995/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="img/pic-2.png" alt="">
+                </div>
+                <div class="team-content">
+                    <h3 data-translate="eva_name">Tsiomi Eva</h3>
+                    <p data-translate="host">Host</p>
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="img/pic-3.png" alt="">
+                </div>
+                <div class="team-content">
+                    <h3 data-translate="helen_name">Georgoula Helen</h3>
+                    <p data-translate="host">Host</p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/elenigeorgoulaa"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/eleni.gewrgoula/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-box">
+                <div class="team-img">
+                    <img src="img/pic-4.png" alt="">
+                </div>
+                <div class="team-content">
+                    <h3 data-translate="irene_name">Georgoula Irene</h3>
+                    <p data-translate="host">Host</p>
+                    <div class="social">
+                        <a href="https://www.facebook.com/eirinigt11"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/eirinigeorgoula_/"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section End-->
+
+    <!-- Contact Section  -->
+    <section class="contact" id="contact">
+        <h1 class="heading" data-translate="contact">Contact <span>Us</span></h1>
+        <p class="heading-description" data-translate="contact_here">We are always here for you</p>
+        <div class="container">
+            <a class="find-us" href="mailto:evangeliatsiomi@gmail.com">
+                <div class="contact-box">
+                    <div>
+                        <i class="fa-solid fa-envelope"></i>
+                        <h2 data-translate="email">Email address <br> <span data-translate="renting_effortless">Send email anytime</span></h2>
+                    </div>
+                    <div>
+                        <p class="no-uppercase">evangeliatsiomi@gmail.com</p>
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </a>
+            <a href="https://maps.app.goo.gl/1g5oMSTf7ViZiFKi6" target="_blank" class="find-us">
+                <div class="contact-box">
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h2 data-translate="address">Address <br> <span data-translate="find_us">Find Us</span></h2>
+                    </div>
+                    <div>
+                        <p data-translate="address_text">Epanomi 57500, Greece</p>
+                        <i class="fa-solid fa-right-long"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="contact-box">
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <h2 data-translate="call_us">Call Us <br> <span data-translate="phone_numbers">Our phone numbers</span></h2>
+                </div>
+                <div>
+                    <p data-translate="contact_ann">Ann<br> +30 6988412553</p>
+                    <p data-translate="contact_eva">Eva<br> +30 6976194202</p>
+                    <p data-translate="contact_helen">Helen<br> +30 6971789026</p>
+                    <i class="fa-solid fa-right-long"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Section -->
+    <section class="footer">
+        <div class="container">
+            <div class="footer-box">
+                <h3 data-translate="follow_us">Follow Us</h3>
+                <div class="social-buttons">
+                    <a href="#" class="social-button social-button--facebook" aria-label="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/evas_apartments_palioura/" target="_blank" class="social-button social-button--linkedin" aria-label="LinkedIn">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- Back to top -->
+    <a id="button"></a>    
+    <script>
+        var btn = $('#button');
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({scrollTop:0}, '300');
+        });
+    </script>
+    <!-- End Back to top -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
