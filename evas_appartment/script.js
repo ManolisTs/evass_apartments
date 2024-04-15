@@ -24,10 +24,22 @@ function change() {
     nav.classList.remove("nav-change");
   }
 }
-
 window.addEventListener("scroll", change);
 
-// Image slider navigation
+// Side menu close om click
+var navDiv = document.getElementById("nav");
+var divsToClick = document.querySelectorAll(".links a");
+for (var i = 0; i < divsToClick.length; i++) {
+    divsToClick[i].addEventListener("click", function() {
+      if (window.innerWidth < 768) {
+        menu.style.left = "-100%";
+        open.style.display = "block";
+        close.style.display = "none";
+      }
+    });
+}
+
+// Small Image Slider navigation
 $(".right-arrow").click(function () {
     var currentImg = $(this).siblings(".slider").find("img:visible");
     var nextImg = currentImg.next("img");
@@ -39,7 +51,6 @@ $(".right-arrow").click(function () {
     currentImg.hide();
     nextImg.show();
 });
-
 $(".left-arrow").click(function () {
     var currentImg = $(this).siblings(".slider").find("img:visible");
     var prevImg = currentImg.prev("img");
@@ -52,45 +63,22 @@ $(".left-arrow").click(function () {
     prevImg.show();
 });
 
-// Open full-screen modal on image click
-$(".apartments-img img").click(function () {
-    var imgSrc = $(this).attr("src");
-    $("#modalImage").attr("src", imgSrc);
-    $("#imageModal").css("display", "block");
-    $("#imageModal").css("z-index", "11000");
-});
-
-// Close full-screen modal
-$(".modal-close-btn").click(function () {
-    $("#imageModal").css("display", "none");
-});
-
-// Close full-screen modal when clicking the close button
-$("#closeModal").click(function () {
-  $("#imageModal").css("display", "none");
-});
-
-// Close full-screen modal when clicking outside of the modal content
-$(window).click(function (e) {
-  if (e.target === document.getElementById("imageModal")) {
-      $("#imageModal").css("display", "none");
-  }
-});
-
-
-// Open full-screen modal on image click
+// Open full-screen on image click
 $(".apartments-img img").click(function () {
   var imgSrc = $(this).attr("src");
+  var sliderId = $(this).closest('.slider').attr('id'); // Get the ID of the parent slider
   $("#modalImage").attr("src", imgSrc);
+  $("#modalImage").attr("data-slider-id", sliderId); // Store the slider ID as data attribute
   $("#imageModal").css("display", "block");
+  $("#imageModal").css("z-index", "11000");
 
   // Show/hide left and right arrows based on image position
   updateModalArrows(imgSrc);
 });
-
 // Function to show/hide modal arrows based on image position
 function updateModalArrows(imgSrc) {
-  var allImages = $(".apartments-img img");
+  var currentSliderId = $("#modalImage").attr("data-slider-id");
+  var allImages = $("#" + currentSliderId).find('img'); // Find images only within the current slider
   var currentIndex = allImages.index(allImages.filter('[src="' + imgSrc + '"]'));
 
   // Show/hide left arrow
@@ -107,11 +95,11 @@ function updateModalArrows(imgSrc) {
       $("#nextImage").show();
   }
 }
-
 // Navigate to the previous image
 $("#prevImage").click(function () {
   var currentImg = $("#modalImage").attr("src");
-  var allImages = $(".apartments-img img");
+  var currentSliderId = $("#modalImage").attr("data-slider-id");
+  var allImages = $("#" + currentSliderId).find('img'); // Find images only within the current slider
   var currentIndex = allImages.index(allImages.filter('[src="' + currentImg + '"]'));
   
   if (currentIndex > 0) {
@@ -120,50 +108,52 @@ $("#prevImage").click(function () {
       updateModalArrows(prevImg);
   }
 });
-
 // Navigate to the next image
 $("#nextImage").click(function () {
   var currentImg = $("#modalImage").attr("src");
-  var allImages = $(".apartments-img img");
+  var currentSliderId = $("#modalImage").attr("data-slider-id");
+  var allImages = $("#" + currentSliderId).find('img'); // Find images only within the current slider
   var currentIndex = allImages.index(allImages.filter('[src="' + currentImg + '"]'));
   
   if (currentIndex < allImages.length - 1) {
       var nextImg = allImages.eq(currentIndex + 1).attr("src");
       $("#modalImage").attr("src", nextImg);
       updateModalArrows(nextImg);
+  } else {
+      // If it's the last image, do nothing
   }
 });
-
-// Close full-screen modal when clicking the close button
+// Close full-screen modal/close button
 $("#closeModal").click(function () {
   $("#imageModal").css("display", "none");
 });
+// Close full-screen modal when clicking outside of the modal content
+$(window).click(function (e) {
+  if (e.target === document.getElementById("imageModal")) {
+      $("#imageModal").css("display", "none");
+  }
+});
 
-// Get references to the button, guide, and close button
+
+// Guide/Pdf
 var openGuideBtn = document.getElementById("openGuideBtn");
 var pdfGuide = document.getElementById("pdfGuide");
 var closeBtn = document.querySelector(".close");
 var pdfObject = document.getElementById("pdfObject");
-
-// Function to open the guide
+// Open Guide
 function openGuide() {
   pdfGuide.style.display = "block";
 }
-
-// Function to close the guide
+// Close Guide
 function closeGuide() {
   pdfGuide.style.display = "none";
-  // Stop the PDF from loading (optional)
   pdfObject.data = "";
 }
-
-// Event listeners
 openGuideBtn.addEventListener("click", openGuide);
 closeBtn.addEventListener("click", closeGuide);
 
 // Language
 var language;
-
 function getLanguage() {
   var selectedLanguage = localStorage.getItem('language') || 'en';
   
@@ -177,12 +167,11 @@ function getLanguage() {
     }
   });
 }
-
 function setLanguage(lang) {
   localStorage.setItem('language', lang);
-  getLanguage(); // Reload language data
+  // Reload language data
+  getLanguage();
 }
-
 function updateLanguageText() {
   $('[data-translate]').each(function () {
     var key = $(this).data('translate');
@@ -197,13 +186,10 @@ function updateLanguageText() {
     }
   });
 }
-
-
 $(".this_language").click(function () {
   var selectedLang = $(this).data('lang');
   setLanguage(selectedLang);
 });
-
 // Initialize the language when the page loads
 getLanguage();
 
@@ -217,25 +203,10 @@ $(document).ready(function () {
       $(".language-options").hide();
     }
   );
-
   // Hide language options when a language is selected
   $(".this_language").click(function () {
     $(".language-options").hide();
   });
 });
 
-// Side menu close om click
-var navDiv = document.getElementById("nav");
-
-// Add click event listeners to the divs you want to trigger the style change
-var divsToClick = document.querySelectorAll(".links a");
-
-for (var i = 0; i < divsToClick.length; i++) {
-    divsToClick[i].addEventListener("click", function() {
-      if (window.innerWidth < 768) {
-        menu.style.left = "-100%";
-        open.style.display = "block";
-        close.style.display = "none";
-      }
-    });
-}
+// Loader
