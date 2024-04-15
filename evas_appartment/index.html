@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <title>Evas's Apartments</title>
+    <title>Eva's Apartments Epanomi</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <!-- Custom css -->
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome Cdn -->
@@ -17,49 +18,63 @@
 </head>
 
 <body>
-    <!-- Header Section -->
-    <div class="header" id="home">
-        <nav id="navbar">
-            <a href="#home" class="logo"><img src="img/logo.png" style="border-radius: 15%;" alt="Eva's Apartments Palioura"></a>
-            <div class="links" id="nav">
-                <a href="#home" data-translate="home_link">Home</a>
-                <a href="#about" data-translate="about_link">About</a>
-                <a href="#apartments" data-translate="apartments_link">Apartments</a>
-                <a href="#service" data-translate="services_link">Services</a>
-                <a href="#team" data-translate="team_link">Team</a>
-                <a href="#contact" data-translate="contact_link">Contact</a>
-                <!-- Language buttons -->
-                <div class="language-dropdown">
-                    <button class="language-button">Language</button>
-                    <div class="language-options">
-                      <a href="#" class="this_language" data-lang="en" data-translate="english_link">English</a>
-                      <a href="#" class="this_language" data-lang="gr" data-translate="greek_link">Greek</a>
+    <!-- Loader -->
+    <div class="loader-body">
+        <div class="loader"></div>
+        <span class="loader-text">Loading . . . </span>
+    </div>
+    <!-- Loader End -->
+    <nav id="navbar">
+        <a href="#evas_apartments_home" class="logo"><img src="img/logo.png" alt="Eva's Apartments Epanomi" width="80px"></a>
+        <div class="links" id="nav">
+            <a href="#evas_apartments_home" data-translate="home_link">Home</a>
+            <a href="#evas_apartments_about" data-translate="about_link">About</a>
+            <a href="#evas_apartments" data-translate="apartments_link">Apartments</a>
+            <a href="#evas_apartments_services" data-translate="services_link">Services</a>
+            <a href="#evas_apartments_footer" data-translate="book_link">Book</a>
+            <a href="#evas_apartments_contact" data-translate="contact_link">Contact</a>
+            <!-- Language buttons -->
+            <div class="language-dropdown">
+                <button class="language-button">Language</button>
+                <div class="language-options">
+                    <div class="flag-inline">
+                        <img src="img/english-flag.png" alt="English flag" width="28px" height="25px">
+                        <a href="#" class="this_language" data-lang="en" data-translate="english_link">English</a>
+                    </div>
+                    <div class="flag-inline">
+                        <img src="img/greek-flag.png" alt="Greek Flag" width="28px" height="25px">
+                        <a href="#" class="this_language" data-lang="gr" data-translate="greek_link">Greek</a>
                     </div>
                 </div>
             </div>
-            <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
-            <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
-        </nav>
+        </div>
+        <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
+        <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
+    </nav>
+    <!-- Header Section -->
+    <div class="header bg-color" id="evas_apartments_home">
         <div class="content">
             <h3 data-translate="renting_effortless">Renting made effortless</h3>
             <h1 data-translate="renting_start">start your vacation<br data-translate="renting_ideal">with an ideal apartment</h1>
-            <a href="#apartments"><button class="btn" data-translate="home_apartments">Apartments</button></a>
+            <a href="#evas_apartments"><button class="btn-apartments" data-translate="home_apartments">Apartments</button></a>
         </div>
     </div>
     <!-- Header Section End -->
 
     <!-- About Section -->
-    <section class="about" id="about">
+    <section class="about" id="evas_apartments_about">
         <div class="container">
             <div class="image"></div>
             <div class="about-content">
                 <h1 data-translate="about_special">What makes our apartments special?</h1>
                 <p>
                     <span data-translate="about_apartments_intro">Our seaside apartments, just 600m from the beach. Enjoy stunning views of the sea and Mount Olympus. </span>
+                    <br><br>
                     <span data-translate="about_apartments_nearby">Nearby, find Beach Bars Kyma and Asterias, a supermarket, and a traditional Greek tavern. </span>
+                    <br><br>
                     <span data-translate="about_apartments_location">We're also conveniently located for day trips: Potamos sea (15 mins), Thessaloniki Airport (25 mins), Cosmos Shopping Center (27 mins), and Thessaloniki city center (35 mins).</span>
                 </p>                  
-                <a href="#contact">
+                <a href="#evas_apartments_footer">
                     <button class="btn" data-translate="book_btn">
                         Book Now!
                     </button>
@@ -71,9 +86,13 @@
                 <h1 data-translate="about_makes_special">What makes our town special?</h1>
                 <p>
                     <span data-translate="about_town_intro">Epanomi, a charming town nestled along the northern coast of Greece, offers a delightful blend of natural beauty and cultural richness. </span>
+                    <br><br>
                     <span data-translate="about_beaches">With its pristine beaches that stretch along the azure Aegean Sea, Epanomi is a haven for sun-seekers and water enthusiasts. </span>
+                    <br><br>
                     <span data-translate="about_vineyards">The town is also renowned for its vineyards, producing some of the finest wines in the region, making it a must-visit destination for wine connoisseurs. </span>
+                    <br><br>
                     <span data-translate="about_streets">Epanomi's picturesque streets are lined with quaint tavernas and cafes where you can savor authentic Greek cuisine while enjoying the warm hospitality of the locals. </span>
+                    <br><br>
                     <span data-translate="about_experience">Whether you're exploring its historical sites or simply basking in the Mediterranean sunshine, Epanomi promises an unforgettable experience for all who visit.</span>
                 </p>                  
                 <button id="openGuideBtn" class="btn" data-translate="town_details">
@@ -94,66 +113,91 @@
     <!-- About Section End-->
 
     <!-- Apartments Section -->
-    <section class="apartments" id="apartments">
+    <section class="apartments bg-color" id="evas_apartments">
         <h1 class="heading" data-translate="our">Our <span>Apartments</span></h1>
         <p class="heading-description" data-translate="view_apartments">View our apartments and their features</p>
         <div class="container">
             <div class="post">
                 <div class="apartments-img">
-                    <div class="slider">
-                        <img src="img/asteria.jpg" alt="">
-                        <img src="img/asteria2.jpg" alt="">
-                        <img src="img/asteria3.jpg" alt="">
-                        <img src="img/asteria4.jpg" alt="">
-                        <img src="img/asteria5.jpg" alt="">
-                        <img src="img/asteria6.jpg" alt="">
+                    <div class="slider" id="helen-slider">
+                        <img src="img/helen/helen.png" alt="Eva’s Apartment with great view Image1">
+                        <img src="img/helen/helen2.png" alt="Eva’s Apartment with great view Image2">
+                        <img src="img/helen/helen3.png" alt="Eva’s Apartment with great view Image3">
+                        <img src="img/helen/helen4.png" alt="Eva’s Apartment with great view Image4">
+                        <img src="img/helen/helen5.png" alt="Eva’s Apartment with great view Image5">
+                        <img src="img/helen/helen6.png" alt="Eva’s Apartment with great view Image6">
+                        <img src="img/helen/helen7.png" alt="Eva’s Apartment with great view Image7">
                     </div>
                     <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
                     <span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                    <span>4 <i class="fa-solid fa-user"></i> </span>
-                </div>
-                <div class="apartments-content">
-                    <h1>Asteria</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at minus explicabo?</p>
-                </div>
-            </div>
-            <!-- Add more posts here -->
-            <div class="post">
-                <div class="apartments-img">
-                    <div class="slider">
-                        <img src="img/asteria.jpg" alt="">
-                        <img src="img/asteria2.jpg" alt="">
-                        <img src="img/asteria3.jpg" alt="">
-                        <img src="img/asteria4.jpg" alt="">
-                        <img src="img/asteria5.jpg" alt="">
-                        <img src="img/asteria6.jpg" alt="">
-                    </div>
-                    <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
-                    <span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                    <span>4 <i class="fa-solid fa-user"></i> </span>
-                </div>
-                <div class="apartments-content">
-                    <h1>Irene</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at minus explicabo?</p>
-                </div>
-            </div>
-            <div class="post">
-                <div class="apartments-img">
-                    <div class="slider">
-                        <img src="img/asteria.jpg" alt="">
-                        <img src="img/asteria2.jpg" alt="">
-                        <img src="img/asteria3.jpg" alt="">
-                        <img src="img/asteria4.jpg" alt="">
-                        <img src="img/asteria5.jpg" alt="">
-                        <img src="img/asteria6.jpg" alt="">
-                    </div>
-                    <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
-                    <span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                    <span>4 <i class="fa-solid fa-user"></i> </span>
+                    <span>3 <i class="fa-solid fa-user"></i> </span>
+                    <span>AC <i class="fa-solid fa-fan"></i></span>
+                    <span><i class="fa-solid fa-wifi"></i></span>
                 </div>
                 <div class="apartments-content">
                     <h1>Helen</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at minus explicabo?</p>
+                    <p>
+                        <span data-translate="helen_first">The studio is located on the 2nd floor of the building with a balcony overlooking the sunset. </span>
+                        <span data-translate="helen_second">It is ideal for couples, families, individual travellers, executives or friends exploring the city. </span>
+                        <span data-translate="helen_third">The studio consists of two rooms: the bedroom and the kitchen. </span>
+                        <span data-translate="helen_fourth">There is one double bed in the bedroom and one in the kitchen. </span>
+                        <span data-translate="helen_fifth">There is also a bathroom. </span>
+                    </p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="apartments-img">
+                    <div class="slider" id="irene-slider">
+                        <img src="img/irene/irene1.png" alt="Eva’s apartment with view to the sea Image1">
+                        <img src="img/irene/irene2.png" alt="Eva’s apartment with view to the sea Image2">
+                        <img src="img/irene/irene3.png" alt="Eva’s apartment with view to the sea Image3">
+                        <img src="img/irene/irene4.png" alt="Eva’s apartment with view to the sea Image4">
+                        <img src="img/irene/irene5.png" alt="Eva’s apartment with view to the sea Image5">
+                        <img src="img/irene/irene6.png" alt="Eva’s apartment with view to the sea Image6">
+                        <img src="img/irene/irene7.png" alt="Eva’s apartment with view to the sea Image7">
+                    </div>
+                    <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+                    <span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    <span>5 <i class="fa-solid fa-user"></i> </span>
+                    <span>AC <i class="fa-solid fa-fan"></i></span>
+                    <span><i class="fa-solid fa-wifi"></i></span>
+                </div>
+                <div class="apartments-content">
+                    <h1>Irene</h1>
+                    <p>
+                        <span data-translate="irene_first">The studio is located on the 2nd floor of the building with a balcony overlooking the sunset. </span>
+                        <span data-translate="irene_second">It is ideal for couples, families, individual travellers, executives or friends exploring the city. </span>
+                        <span data-translate="irene_third">The studio consists of three rooms: the bedroom, the kitchen and the living room. </span>
+                        <span data-translate="irene_fourth">There is one double bed in the bedroom, one in the kitchen and one in the living room. </span>
+                        <span data-translate="irene_fifth">There is also a bathroom. </span>
+                    </p>
+                </div>
+            </div>
+            <div class="post">
+                <div class="apartments-img">
+                    <div class="slider" id="asteria-slider">
+                        <img src="img/asteria/asteria.jpg" alt="Eva's apartment Image1">
+                        <img src="img/asteria/asteria2.jpg" alt="Eva's apartment Image2">
+                        <img src="img/asteria/asteria3.jpg" alt="Eva's apartment Image3">
+                        <img src="img/asteria/asteria4.jpg" alt="Eva's apartment Image4">
+                        <img src="img/asteria/asteria5.jpg" alt="Eva's apartment Image5">
+                        <img src="img/asteria/asteria6.jpg" alt="Eva's apartment Image6">
+                    </div>
+                    <span class="left-arrow"><i class="fa-solid fa-arrow-left"></i></span>
+                    <span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                    <span>2 <i class="fa-solid fa-user"></i> </span>
+                    <span>AC <i class="fa-solid fa-fan"></i></span>
+                    <span><i class="fa-solid fa-wifi"></i></span>
+                </div>
+                <div class="apartments-content">
+                    <h1>Asteria</h1>
+                    <p>
+                        <span data-translate="asteria_first">The studio is located on the 2nd floor of the building with a balcony overlooking the sunset. </span>
+                        <span data-translate="asteria_second">It is ideal for couples, families, individual travellers, executives or friends exploring the city. </span>
+                        <span data-translate="asteria_third">The studio consists of two rooms: the bedroom and the kitchen. </span>
+                        <span data-translate="asteria_fourth">There is one double bed in the bedroom. </span>
+                        <span data-translate="asteria_fifth">There is also a bathroom. </span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -172,7 +216,7 @@
     <!-- Apartments Section End-->
 
     <!-- Service Section -->
-    <section class="service" id="service">
+    <section class="service" id="evas_apartments_services">
         <h1 class="heading" data-translate="service_our">Our <span>Services</span></h1>
         <p class="heading-description" data-translate="services_offer">We offer basic services for all apartments</p>
         <div class="container">
@@ -183,9 +227,29 @@
                     <p class="text" data-translate="wifi_text">All the apartments have free internet access</p>
                 </div>
                 <div class="card">
+                    <div class="icon"><i class="fa fa-fan"></i></div>
+                    <p class="title" data-translate="ac">AC</p>
+                    <p class="text" data-translate="ac_text">All the apartments have Air Condition</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa fa-tv"></i></div>
+                    <p class="title" data-translate="tv">TV</p>
+                    <p class="text" data-translate="tv_text">All the apartments have a TV</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa fa-wind"></i></div>
+                    <p class="title" data-translate="hairdryer">Hairdryer</p>
+                    <p class="text" data-translate="hairdryer_text">All the apartments have a Hairdryer</p>
+                </div>
+                <div class="card">
                     <div class="icon"><i class="fa-solid fa-bowl-food"></i></div>
-                    <p class="title" data-translate="breakfasts">Breakfast</p>
-                    <p class="text" data-translate="breakfast_text">We provide breakfast for the rental days</p>
+                    <p class="title" data-translate="breakfast">Kitchen</p>
+                    <p class="text" data-translate="breakfast_text">All the apartments have Fully Equipped Kitchen</p>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fa-solid fa-snowflake"></i></div>
+                    <p class="title" data-translate="refrigerator">Refrigerator</p>
+                    <p class="text" data-translate="refrigerator_text">All the apartments have a Refrigerator</p>
                 </div>
                 <div class="card">
                     <div class="icon"><i class="fa fa-parking"></i></div>
@@ -207,69 +271,8 @@
     </section>
     <!-- Service Section End -->
 
-    <!-- Team Section -->
-    <section class="team" id="team">
-        <h1 class="heading" data-translate="team_our"> Our <span>Team</span></h1>
-        <p class="heading-description" data-translate="team_hospitality">Long tradition & true love in hospitality</p>
-        <div class="container">
-            <div class="team-box">
-                <div class="team-img">
-                    <img src="img/pic-1.png" alt="">
-                </div>
-                <div class="team-content">
-                    <h3 data-translate="ann_name">Georgoula Ann</h3>
-                    <p data-translate="host">Host</p>
-                    <div class="social">
-                        <a href="https://www.facebook.com/profile.php?id=100015775124119"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/angeor1995/"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="team-box">
-                <div class="team-img">
-                    <img src="img/pic-2.png" alt="">
-                </div>
-                <div class="team-content">
-                    <h3 data-translate="eva_name">Tsiomi Eva</h3>
-                    <p data-translate="host">Host</p>
-                    <div class="social">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="team-box">
-                <div class="team-img">
-                    <img src="img/pic-3.png" alt="">
-                </div>
-                <div class="team-content">
-                    <h3 data-translate="helen_name">Georgoula Helen</h3>
-                    <p data-translate="host">Host</p>
-                    <div class="social">
-                        <a href="https://www.facebook.com/elenigeorgoulaa"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/eleni.gewrgoula/"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="team-box">
-                <div class="team-img">
-                    <img src="img/pic-4.png" alt="">
-                </div>
-                <div class="team-content">
-                    <h3 data-translate="irene_name">Georgoula Irene</h3>
-                    <p data-translate="host">Host</p>
-                    <div class="social">
-                        <a href="https://www.facebook.com/eirinigt11"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/eirinigeorgoula_/"><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Team Section End-->
-
     <!-- Contact Section  -->
-    <section class="contact" id="contact">
+    <section class="contact bg-color" id="evas_apartments_contact">
         <h1 class="heading" data-translate="contact">Contact <span>Us</span></h1>
         <p class="heading-description" data-translate="contact_here">We are always here for you</p>
         <div class="container">
@@ -277,7 +280,7 @@
                 <div class="contact-box">
                     <div>
                         <i class="fa-solid fa-envelope"></i>
-                        <h2 data-translate="email">Email address <br> <span data-translate="renting_effortless">Send email anytime</span></h2>
+                        <h2 data-translate="email">Email address</h2>
                     </div>
                     <div>
                         <p class="no-uppercase">evangeliatsiomi@gmail.com</p>
@@ -285,11 +288,11 @@
                     </div>
                 </div>
             </a>
-            <a href="https://maps.app.goo.gl/1g5oMSTf7ViZiFKi6" target="_blank" class="find-us">
+            <a class="find-us" href="https://maps.app.goo.gl/1g5oMSTf7ViZiFKi6" target="_blank">
                 <div class="contact-box">
                     <div>
                         <i class="fa-solid fa-location-dot"></i>
-                        <h2 data-translate="address">Address <br> <span data-translate="find_us">Find Us</span></h2>
+                        <h2 data-translate="address">Address</h2>
                     </div>
                     <div>
                         <p data-translate="address_text">Epanomi 57500, Greece</p>
@@ -300,12 +303,12 @@
             <div class="contact-box">
                 <div>
                     <i class="fa-solid fa-phone"></i>
-                    <h2 data-translate="call_us">Call Us <br> <span data-translate="phone_numbers">Our phone numbers</span></h2>
+                    <h2 data-translate="call_us">Call Us</h2>
                 </div>
                 <div>
-                    <p data-translate="contact_ann">Ann<br> +30 6988412553</p>
-                    <p data-translate="contact_eva">Eva<br> +30 6976194202</p>
-                    <p data-translate="contact_helen">Helen<br> +30 6971789026</p>
+                    <p data-translate="contact_ann">Ann: +30 6988412553</p>
+                    <p data-translate="contact_eva">Eva: +30 6976194202</p>
+                    <p data-translate="contact_helen">Helen: +30 6971789026</p>
                     <i class="fa-solid fa-right-long"></i>
                 </div>
             </div>
@@ -314,19 +317,72 @@
     <!-- Contact Section End -->
 
     <!-- Footer Section -->
-    <section class="footer">
+    <section class="footer" id="evas_apartments_footer">
         <div class="container">
             <div class="footer-box">
-                <h3 data-translate="follow_us">Follow Us</h3>
-                <div class="social-buttons">
-                    <a href="#" class="social-button social-button--facebook" aria-label="Facebook">
-                      <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/evas_apartments_palioura/" target="_blank" class="social-button social-button--linkedin" aria-label="LinkedIn">
-                      <i class="fab fa-instagram"></i>
-                    </a>
+                <div class="left-right-footer">
+                    <div>
+                        <h3 data-translate="follow_us">Follow Us</h3>
+                        <div class="social-buttons">
+                            <a href="#" class="social-button social-button--facebook" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/evas_apartments_palioura/" target="_blank" class="social-button social-button--instagram" aria-label="LinkedIn">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 data-translate="book_airbnb">Book with Airbnb</h3>
+                        <div class="social-buttons">
+                            <div class="airbnb-apartment">
+                                <a href="https://www.airbnb.gr/rooms/34823788?adults=1&viralityEntryPoint=1&s=76&unique_share_id=0B09E65C-7CA7-471D-910B-7FC8190BC5AD&_branch_match_id=1298656548860923847&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdXPySr3yA1NNc3wTAIADDAAmhsAAAA%3D&source_impression_id=p3_1711550341_zitzq85LSlviZh69" target="_blank" class="social-button social-button--airbnb" aria-label="LinkedIn">
+                                    <i class="fab fa-airbnb"></i>
+                                </a>
+                                <h1 class="airbnb-title">Helen</h1>
+                            </div>
+                            <div class="airbnb-apartment">
+                                <a href="https://www.airbnb.gr/rooms/35491070?adults=1&viralityEntryPoint=1&s=76&unique_share_id=5FBDC25C-C49B-41F8-8F2E-9CA8CCBC9D53&_branch_match_id=1298656548860923847&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdVPTwnIsXS1CMvwTAIAlZgYARsAAAA%3D&source_impression_id=p3_1711550331_ThtYlSx%2BKif82Tn9" target="_blank" class="social-button social-button--airbnb" aria-label="LinkedIn">
+                                    <i class="fab fa-airbnb"></i>
+                                </a>
+                                <h1 class="airbnb-title">Irene</h1>
+                            </div>
+                            <div class="airbnb-apartment">
+                                <a href="https://www.airbnb.gr/rooms/909405927858318987?adults=1&viralityEntryPoint=1&s=76&unique_share_id=794AE90F-ACBE-4EFA-A3B6-AD23CC5B7B7E&_branch_match_id=1298656548860923847&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT0zKS9LLTdU3TMvJLjBIM83wTAIAj%2BDqcxsAAAA%3D&source_impression_id=p3_1711533543_URxtDbR2NNm1jvIT" target="_blank" class="social-button social-button--airbnb" aria-label="LinkedIn">
+                                    <i class="fab fa-airbnb"></i>
+                                </a>
+                                <h1 class="airbnb-title">Asteria</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 data-translate="book_booking">Book with Booking.com</h3>
+                        <div class="social-buttons">
+                            <div class="airbnb-apartment">
+                                <a href="https://www.booking.com/hotel/gr/sea-view-apartment-thessalonike-epanome.el.html?aid=356980&label=gog235jc-1FCAsoXEIeZXZhcy1hcGFydG1lbnQtd2l0aC1ncmVhdC12aWV3SAhYA2hciAEBmAEIuAEXyAEM2AEB6AEB-AECiAIBqAIDuALL6JCwBsACAdICJDE0OGNkNWMzLTA0ZWItNDkyOC05ZThkLThlOThjOWNkMTYzNdgCBeACAQ&sid=b8413b486c308f761dc81dadf7cee27a&dest_id=-817001;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=26;hpos=1;nflt=sth%3D1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1711551603;srpvid=46bb696ead14030d;type=total;ucfs=1&#hotelTmpl" target="_blank" class="social-button" aria-label="LinkedIn">
+                                    <img src="/img/booking.png" alt="Evas Apartment Booking.com" width="40px" style="border-radius: 100%">
+                                </a>
+                                <h1 class="airbnb-title">Helen</h1>
+                            </div>
+                            <div class="airbnb-apartment">
+                                <a href="https://www.booking.com/hotel/gr/evas-apartment-with-great-view.el.html?aid=356980&label=gog235jc-1FCAsoXEIeZXZhcy1hcGFydG1lbnQtd2l0aC1ncmVhdC12aWV3SAhYA2hciAEBmAEIuAEXyAEM2AEB6AEB-AECiAIBqAIDuALL6JCwBsACAdICJDE0OGNkNWMzLTA0ZWItNDkyOC05ZThkLThlOThjOWNkMTYzNdgCBeACAQ&sid=b8413b486c308f761dc81dadf7cee27a&dest_id=-817001;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=19;hpos=19;nflt=sth%3D1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1711551584;srpvid=46bb696ead14030d;type=total;ucfs=1&#hotelTmpl" target="_blank" class="social-button" aria-label="LinkedIn">
+                                    <img src="/img/booking.png" alt="Eva Apartment with great view Booking.com" width="40px" style="border-radius: 100%">
+                                </a>
+                                <h1 class="airbnb-title">Irene</h1>
+                            </div>
+                            <div class="airbnb-apartment">
+                                <a href="https://www.booking.com/hotel/gr/apartments-with-great-view.el.html?aid=866831&app_hotel_id=5337554&checkin=2024-05-15&checkout=2024-05-18&from_sn=ios&group_adults=2&group_children=0&label=Share-cTYk2t%401711556420&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA%2C" target="_blank" class="social-button" aria-label="LinkedIn">
+                                    <img src="/img/booking.png" alt="Eva's Apartments with great view Booking.com" width="40px" style="border-radius: 100%">
+                                </a>
+                                <h1 class="airbnb-title">Asteria</h1>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="copyrights">
+            <p>© Copyright Tsiomis Emmanouil. All Rights Reserved</p>
         </div>
     </section>
     <!-- Footer Section End -->
@@ -350,6 +406,14 @@
         });
     </script>
     <!-- End Back to top -->
+
+    <!-- Loader JS -->
+    <script>
+        window.addEventListener('load', function() {
+            var loader = document.querySelector('.loader-body');
+            loader.style.display = 'none';
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
