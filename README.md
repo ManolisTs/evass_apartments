@@ -1,4 +1,4 @@
-Eva's Apartments Landing Page
+# Eva's Apartments
 
 Welcome to Eva's Apartments Landing Page! This project is a simple yet elegant promotional landing page designed for showcasing the charm and allure of Eva's Apartments located in the picturesque village of Epanomi. Developed using HTML, CSS, Bootstrap, and JavaScript, this landing page offers a seamless browsing experience for potential guests and visitors.
 
